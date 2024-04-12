@@ -23,16 +23,9 @@ class Rectangle
 
 class Square extends Rectangle
 {
-    public function setWidth($width)
+    public function area()
     {
-        $this->width = $width;
-        $this->height = $width;
-    }
-
-    public function setHeight($height)
-    {
-        $this->height = $height;
-        $this->width = $height;
+        return $this->width * $this->width;
     }
 }
 
@@ -49,4 +42,4 @@ $rectangle = new Rectangle();
 $square = new Square();
 
 echo getArea($rectangle); // 20
-echo getArea($square); // 25
+echo getArea($square); // 16
